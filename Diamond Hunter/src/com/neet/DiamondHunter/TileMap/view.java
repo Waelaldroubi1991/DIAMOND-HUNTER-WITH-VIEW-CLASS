@@ -17,8 +17,10 @@ import com.neet.DiamondHunter.TileMap.*;
 
 
 public class view extends JPanel{
+	
 	//object to call draw function from TileMap
 	private TileMap tilemap;
+	
 	
 	//Constructor to load recourses like map and tiles
 	public view(){
@@ -26,6 +28,7 @@ public class view extends JPanel{
 		tilemap.loadMap("/Maps/testmap.map");
 		tilemap.loadTiles("/Tilesets/testtileset.gif");
 	}
+	
 	
 	//function to call graphics and connect it with draw function from TileMap
 	public void paint (Graphics g){
@@ -47,5 +50,6 @@ public class view extends JPanel{
 		//to close the application when it's finish
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setVisible(true);
+		
 	}
 }
