@@ -8,6 +8,7 @@ import java.util.ResourceBundle;
 import javax.swing.JFrame;
 
 import com.neet.DiamondHunter.TileMap.view;
+import com.neet.DiamondHunter.TileMap.viewAB;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -40,7 +41,22 @@ public class controller implements Initializable {
 				//btnmap.setContentDisplay(panel);
 				frame.setContentPane(panel);
 				//to close the application when it's finish
-				frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+				//frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+				frame.setVisible(true);
+	}
+	
+	public void ab (ActionEvent event){
+		//this line to create a screen
+				JFrame frame = new JFrame ("MapViewer screen");
+				//size of the screen
+				frame.setSize(new Dimension (655, 600));
+				//starting point of the screen so it won't start at the up left corner of the screen
+				frame.setLocation(new Point(200,80));
+				//creating the Panel container
+				viewAB panel = new viewAB();
+				frame.setContentPane(panel);
+				//to close the application when it's finish
+				//frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 				frame.setVisible(true);
 	}
 
