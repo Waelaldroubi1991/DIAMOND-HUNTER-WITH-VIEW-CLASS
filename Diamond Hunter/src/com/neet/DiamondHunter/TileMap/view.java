@@ -6,10 +6,12 @@ package com.neet.DiamondHunter.TileMap;
 import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.Point;
+import java.util.ArrayList;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
+import com.neet.DiamondHunter.Entity.Item;
 import com.neet.DiamondHunter.TileMap.*;
 
 //this class is to control the whole map view application
@@ -20,16 +22,13 @@ public class view extends JPanel{
 	
 	//object to call draw function from TileMap
 	private TileMap tilemap;
-	
-	
+	private Item item;
 	//Constructor to load recourses like map and tiles
 	public view(){
 		tilemap = new TileMap(16);
 		tilemap.loadMap("/Maps/testmap.map");
-		tilemap.loadTiles("/Tilesets/testtileset.gif");
+		tilemap.loadTiles("/Tilesets/testtileset.gif");	
 	}
-	
-	
 	//function to call graphics and connect it with draw function from TileMap
 	public void paint (Graphics g){
 		tilemap.draw(g);
