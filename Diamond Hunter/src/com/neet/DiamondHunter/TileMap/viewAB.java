@@ -24,9 +24,6 @@ public class viewAB extends JPanel{
 	private ArrayList<Item> items;
 	private ArrayList<Item> items1;
 	
-	
-	
-	
 	//Constructor to load recourses like map and tiles
 	public viewAB(){
 		items = new ArrayList<Item>();
@@ -72,6 +69,7 @@ public class viewAB extends JPanel{
 	public void paint (Graphics g){
 		tilemap.draw(g);
 		item.draw(g);
+		item1.draw(g);
 	}
 	
 	//Main function to control the flow of the program
