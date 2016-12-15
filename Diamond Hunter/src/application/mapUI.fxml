@@ -1,11 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="700.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller">
+<AnchorPane prefHeight="800.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller">
    <children>
-      <Button fx:id="btnmap" layoutX="106.0" layoutY="42.0" mnemonicParsing="false" onAction="#map" prefHeight="27.0" prefWidth="195.0" style="-fx-border-color: Green;" text="View Diamond Hunter Map" />
-      <Button fx:id="btnab" layoutX="106.0" layoutY="102.0" mnemonicParsing="false" onAction="#ab" prefHeight="27.0" prefWidth="195.0" style="-fx-border-color: Green;" text="View AXE &amp; BOAT" />
+      <Button fx:id="btnmap" layoutX="106.0" layoutY="121.0" mnemonicParsing="false" onAction="#map" prefHeight="27.0" prefWidth="195.0" style="-fx-border-color: Green;" text="View Diamond Hunter Map" />
+      <Button fx:id="btnab" layoutX="106.0" layoutY="207.0" mnemonicParsing="false" onAction="#ab" prefHeight="27.0" prefWidth="195.0" style="-fx-border-color: Green;" text="View AXE &amp; BOAT" />
+      <Button fx:id="pg" layoutX="106.0" layoutY="35.0" mnemonicParsing="false" onAction="#pg" prefHeight="25.0" prefWidth="195.0" style="-fx-border-color: Green;" text="Play Game" />
+      <TextField fx:id="axeX" layoutX="32.0" layoutY="305.0" onAction="#changeab" promptText="Enter Axe X position" />
+      <TextField fx:id="boatX" layoutX="213.0" layoutY="305.0" onAction="#changeab" promptText="Enter Boat X position" />
+      <Label fx:id="label" layoutX="153.0" layoutY="260.0" text="input INT Numbers" />
+      <Button fx:id="submit" layoutX="173.0" layoutY="403.0" mnemonicParsing="false" onAction="#gettingab" text="Submit" />
+      <TextField fx:id="axeY" layoutX="32.0" layoutY="350.0" onAction="#changeab" promptText="Enter Axe Y Position" />
+      <TextField fx:id="boatY" layoutX="213.0" layoutY="350.0" onAction="#changeab" promptText="Enter Boat Y position" />
    </children>
 </AnchorPane>
