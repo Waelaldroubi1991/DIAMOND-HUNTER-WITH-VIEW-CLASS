@@ -7,6 +7,7 @@ import java.util.ResourceBundle;
 
 import javax.swing.JFrame;
 
+import com.neet.DiamondHunter.Main.GamePanel;
 import com.neet.DiamondHunter.TileMap.view;
 import com.neet.DiamondHunter.TileMap.viewAB;
 
@@ -14,6 +15,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.image.ImageView;
 
 public class controller implements Initializable {
 	
@@ -27,6 +29,10 @@ public class controller implements Initializable {
 	
 	@FXML
 	private Button btnab;
+	
+	@FXML
+	private Button pg;
+	
 	
 	@FXML
 	public void map (ActionEvent event){
@@ -59,6 +65,20 @@ public class controller implements Initializable {
 				//frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 				frame.setVisible(true);
 	}
+	
+	public void pg (ActionEvent event){
+JFrame window = new JFrame("Diamond Hunter");
+		
+		window.add(new GamePanel());
+		
+		window.setResizable(false);
+		window.pack();
+		
+		window.setLocationRelativeTo(null);
+		window.setVisible(true);
+		//window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	}
+	
 
 	public controller() {
 		// TODO Auto-generated constructor stub
