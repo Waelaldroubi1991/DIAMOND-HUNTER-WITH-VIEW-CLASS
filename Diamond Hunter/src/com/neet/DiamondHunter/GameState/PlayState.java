@@ -5,6 +5,7 @@
 
 package com.neet.DiamondHunter.GameState;
 
+import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Rectangle;
 import java.util.ArrayList;
@@ -175,7 +176,7 @@ public class PlayState extends GameState {
 		diamonds.add(d);
 		
 	}
-	
+	//private
 	private void populateItems() {
 		
 		Item item;
@@ -189,6 +190,8 @@ public class PlayState extends GameState {
 		item.setType(Item.BOAT);
 		item.setTilePosition(12, 4);
 		items.add(item);
+		
+		
 		
 	}
 	
@@ -284,12 +287,10 @@ public class PlayState extends GameState {
 		
 	}
 	
-	public void draw(Graphics2D g) {
+public void draw(Graphics2D g) {
 		
 		// draw tilemap
 		tileMap.draw(g);
-		//my code
-		//t.draw(g);
 		
 		// draw player
 		player.draw(g);

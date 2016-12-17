@@ -5,6 +5,7 @@
 
 package com.neet.DiamondHunter.Entity;
 
+import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 
@@ -44,7 +45,7 @@ public class Item extends Entity{
 		}
 	}
 	
-	public void draw(Graphics2D g) {
+	public void draw(Graphics g) {
 		setMapPosition();
 		g.drawImage(sprite, x + xmap - width / 2, y + ymap - height / 2, null);
 	}

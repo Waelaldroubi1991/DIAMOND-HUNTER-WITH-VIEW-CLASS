@@ -4,6 +4,7 @@
 
 package com.neet.DiamondHunter.Entity;
 
+import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Rectangle;
 
@@ -188,7 +189,7 @@ public abstract class Entity {
 	}
 	
 	// Draws the entity.
-	public void draw(Graphics2D g) {
+	public void draw(Graphics g) {
 		setMapPosition();
 		g.drawImage(
 			animation.getImage(),

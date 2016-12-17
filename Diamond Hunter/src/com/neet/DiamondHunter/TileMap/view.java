@@ -35,7 +35,7 @@ public class view extends JPanel{
 	}
 	
 	//Main function to control the flow of the program
-	public static void main (String[] args)
+	/*public static void main (String[] args)
 	{	
 		//this line to create a screen
 		JFrame frame = new JFrame ("MapViewer screen");
@@ -50,5 +50,5 @@ public class view extends JPanel{
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setVisible(true);
 		
-	}
+	}*/
 }

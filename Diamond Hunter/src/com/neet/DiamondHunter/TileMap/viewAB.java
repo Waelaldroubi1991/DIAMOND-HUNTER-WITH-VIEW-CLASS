@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-
+import application.*;
 import com.neet.DiamondHunter.Entity.Item;
 import com.neet.DiamondHunter.TileMap.*;
 
@@ -15,7 +15,7 @@ import com.neet.DiamondHunter.TileMap.*;
 //it's in swing right now and I will change it to javafx as a next step
 
 
-public class viewAB extends JPanel{
+public class viewAB<controller> extends JPanel{
 	
 	//object to call draw function from TileMap
 	private TileMap tilemap;
@@ -73,7 +73,7 @@ public class viewAB extends JPanel{
 	}
 	
 	//Main function to control the flow of the program
-	public static void main (String[] args)
+	/*public static void main (String[] args)
 	{	
 		//this line to create a screen
 		JFrame frame = new JFrame ("MapViewer screen");
@@ -86,7 +86,6 @@ public class viewAB extends JPanel{
 		frame.setContentPane(panel);
 		//to close the application when it's finish
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.setVisible(true);
-		
-	}
+		frame.setVisible(true);	
+	}*/
 }

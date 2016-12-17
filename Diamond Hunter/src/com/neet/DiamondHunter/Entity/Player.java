@@ -6,6 +6,7 @@
 
 package com.neet.DiamondHunter.Entity;
 
+import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 
@@ -184,7 +185,7 @@ public class Player extends Entity {
 	}
 	
 	// Draw Player.
-	public void draw(Graphics2D g) {
+	public void draw(Graphics g) {
 		super.draw(g);
 	}
 	

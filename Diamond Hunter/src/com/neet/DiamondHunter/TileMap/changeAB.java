@@ -70,7 +70,7 @@ public class changeAB extends JPanel{
 	}
 	
 	//Main function to control the flow of the program
-	public static void main (String[] args)
+	/*public static void main (String[] args)
 	{	
 		//this line to create a screen
 		JFrame frame = new JFrame ("Change Axe & Boat screen");
@@ -86,5 +86,5 @@ public class changeAB extends JPanel{
 		frame.setVisible(true);
 		
 		
-	}
+	}*/
 }
