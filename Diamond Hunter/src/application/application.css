@@ -1,1 +1,29 @@
-/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+
+
+<style>
+
+#container {
+	background-color: red;
+}
+
+#pg{
+	background-color:black;
+    color:white;
+	padding:5px 10px 50px 500px;
+}
+
+#btnmap{
+	background-color:black;
+}
+
+#btnab{
+	background-color:black;
+}
+
+#submit{
+	background-color:black;
+}
+
+
+
+</style>

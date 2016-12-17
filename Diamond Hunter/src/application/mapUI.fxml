@@ -4,17 +4,45 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="800.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller">
+<AnchorPane id="container" fx:id="container" prefHeight="500.0" prefWidth="400.0" style="-fx-background-color: Black; -fx-background-radius: 20;" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller">
    <children>
-      <Button fx:id="btnmap" layoutX="106.0" layoutY="121.0" mnemonicParsing="false" onAction="#map" prefHeight="27.0" prefWidth="195.0" style="-fx-border-color: Green;" text="View Diamond Hunter Map" />
-      <Button fx:id="btnab" layoutX="106.0" layoutY="207.0" mnemonicParsing="false" onAction="#ab" prefHeight="27.0" prefWidth="195.0" style="-fx-border-color: Green;" text="View AXE &amp; BOAT" />
-      <Button fx:id="pg" layoutX="106.0" layoutY="35.0" mnemonicParsing="false" onAction="#pg" prefHeight="25.0" prefWidth="195.0" style="-fx-border-color: Green;" text="Play Game" />
-      <TextField fx:id="axeX" layoutX="32.0" layoutY="305.0" onAction="#changeab" promptText="Enter Axe X position" />
-      <TextField fx:id="boatX" layoutX="213.0" layoutY="305.0" onAction="#changeab" promptText="Enter Boat X position" />
-      <Label fx:id="label" layoutX="153.0" layoutY="260.0" text="input INT Numbers" />
-      <Button fx:id="submit" layoutX="173.0" layoutY="403.0" mnemonicParsing="false" onAction="#gettingab" text="Submit" />
-      <TextField fx:id="axeY" layoutX="32.0" layoutY="350.0" onAction="#changeab" promptText="Enter Axe Y Position" />
-      <TextField fx:id="boatY" layoutX="213.0" layoutY="350.0" onAction="#changeab" promptText="Enter Boat Y position" />
+      <Button fx:id="btnmap" layoutX="106.0" layoutY="108.0" mnemonicParsing="false" onAction="#map" prefHeight="50.0" prefWidth="195.0" style="-fx-background-color: green; -fx-background-radius: 100; -fx-border-color: blue; -fx-border-radius: 100;" stylesheets="@application.css" text="View Diamond Hunter Map" textFill="WHITE">
+         <font>
+            <Font name="28 Days Later" size="15.0" />
+         </font></Button>
+      <Button fx:id="btnab" layoutX="106.0" layoutY="184.0" mnemonicParsing="false" onAction="#ab" prefHeight="50.0" prefWidth="195.0" style="-fx-background-color: green; -fx-background-radius: 100; -fx-border-color: blue; -fx-border-radius: 100;" stylesheets="@application.css" text="View AXE &amp; BOAT" textFill="WHITE">
+         <font>
+            <Font name="28 Days Later" size="20.0" />
+         </font></Button>
+      <Button fx:id="pg" layoutX="106.0" layoutY="35.0" mnemonicParsing="false" onAction="#pg" prefHeight="50.0" prefWidth="195.0" style="-fx-background-color: green; -fx-background-radius: 100; -fx-border-color: Blue; -fx-border-radius: 100;" stylesheets="@application.css" text="Play Game" textFill="WHITE">
+         <font>
+            <Font name="28 Days Later" size="20.0" />
+         </font></Button>
+      <TextField fx:id="axeX" layoutX="50.0" layoutY="303.0" onAction="#changeab" prefHeight="21.0" prefWidth="138.0" promptText="Enter Axe X position" style="-fx-background-radius: 100; -fx-background-color: #ff1493; -fx-border-color: blue; -fx-border-radius: 100;">
+         <font>
+            <Font name="28 Days Later" size="12.0" />
+         </font></TextField>
+      <TextField fx:id="boatX" layoutX="214.0" layoutY="303.0" onAction="#changeab" prefHeight="21.0" prefWidth="138.0" promptText="Enter Boat X position" style="-fx-background-radius: 100; -fx-background-color: #ff1493; -fx-border-radius: 100; -fx-border-color: blue;">
+         <font>
+            <Font name="28 Days Later" size="12.0" />
+         </font></TextField>
+      <Label fx:id="label" layoutX="82.0" layoutY="260.0" style="-fx-border-radius: 100;" text="INPUT   {INT}    NUMBERS" textFill="WHITE">
+         <font>
+            <Font name="!Sketchy Times" size="22.0" />
+         </font></Label>
+      <Button fx:id="submit" layoutX="56.0" layoutY="392.0" mnemonicParsing="false" onAction="#gettingab" prefHeight="50.0" prefWidth="295.0" style="-fx-background-color: #ff1493; -fx-background-radius: 100; -fx-border-color: blue; -fx-border-radius: 100;" stylesheets="@application.css" text="Submit" textFill="WHITE">
+         <font>
+            <Font name="28 Days Later" size="30.0" />
+         </font></Button>
+      <TextField fx:id="axeY" layoutX="50.0" layoutY="348.0" onAction="#changeab" prefHeight="21.0" prefWidth="138.0" promptText="Enter Axe Y Position" style="-fx-background-radius: 100; -fx-background-color: #ff1493; -fx-border-radius: 100; -fx-border-color: blue;">
+         <font>
+            <Font name="28 Days Later" size="12.0" />
+         </font></TextField>
+      <TextField fx:id="boatY" layoutX="214.0" layoutY="348.0" onAction="#changeab" prefHeight="21.0" prefWidth="138.0" promptText="Enter Boat Y position" style="-fx-background-radius: 100; -fx-background-color: #ff1493; -fx-border-radius: 100; -fx-border-color: blue;">
+         <font>
+            <Font name="28 Days Later" size="12.0" />
+         </font></TextField>
    </children>
 </AnchorPane>

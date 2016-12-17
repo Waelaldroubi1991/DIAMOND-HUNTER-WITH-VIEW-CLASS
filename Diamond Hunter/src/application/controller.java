@@ -103,7 +103,7 @@ public class controller implements Initializable {
 				//size of the screen
 				frame.setSize(new Dimension (655, 600));
 				//starting point of the screen so it won't start at the up left corner of the screen
-				frame.setLocation(new Point(200,80));
+				frame.setLocation(new Point(350,80));
 				//creating the Panel container
 				view panel = new view();
 				//btnmap.setContentDisplay(panel);
@@ -119,7 +119,7 @@ public class controller implements Initializable {
 				//size of the screen
 				frame.setSize(new Dimension (655, 600));
 				//starting point of the screen so it won't start at the up left corner of the screen
-				frame.setLocation(new Point(200,80));
+				frame.setLocation(new Point(350,80));
 				//creating the Panel container
 				viewAB panel = new viewAB();
 				frame.setContentPane(panel);
@@ -147,7 +147,7 @@ JFrame window = new JFrame("Diamond Hunter");
 		//size of the screen
 		frame.setSize(new Dimension (655, 600));
 		//starting point of the screen so it won't start at the up left corner of the screen
-		frame.setLocation(new Point(200,80));
+		frame.setLocation(new Point(350,80));
 		//creating the Panel container
 		changeAB panel = new changeAB();
 		//Container panel1 = new Container();
@@ -201,8 +201,10 @@ JFrame window = new JFrame("Diamond Hunter");
 				item1.setTilePosition(b1, b2);
 				items1.add(item1);
 				//boat();	
+				//return item;
+				//return item1;
 	}
-	//added just in case
+	//added just in case the one at changeAB not reading
 	public void paint (Graphics g){
 		tilemap.draw(g);
 		item.draw(g);

@@ -25,15 +25,15 @@ public class changeAB extends JPanel{
 	private TileMap tilemap;
 	private Item item;
 	private Item item1;
-	private ArrayList<Item> items;
-	private ArrayList<Item> items1;
+	//private ArrayList<Item> items;
+	//private ArrayList<Item> items1;
 	private controller control;
 	
 	
 	//Constructor to load recourses like map and tiles
 	public changeAB(){
-		items = new ArrayList<Item>();
-		items1 = new ArrayList<Item>();
+		//items = new ArrayList<Item>();
+		//items1 = new ArrayList<Item>();
 		
 		tilemap = new TileMap(16);
 		tilemap.loadMap("/Maps/testmap.map");
