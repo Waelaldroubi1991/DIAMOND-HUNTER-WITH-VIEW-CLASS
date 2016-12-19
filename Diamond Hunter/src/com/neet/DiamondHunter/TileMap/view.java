@@ -22,7 +22,7 @@ public class view extends JPanel{
 	
 	//object to call draw function from TileMap
 	private TileMap tilemap;
-	private Item item;
+	//private Item item;
 	//Constructor to load recourses like map and tiles
 	public view(){
 		tilemap = new TileMap(16);

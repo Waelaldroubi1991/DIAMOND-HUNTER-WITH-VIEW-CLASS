@@ -15,8 +15,12 @@ import com.neet.DiamondHunter.TileMap.*;
 //it's in swing right now and I will change it to javafx as a next step
 
 
-public class viewAB<controller> extends JPanel{
+public class viewAB extends JPanel{
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	//object to call draw function from TileMap
 	private TileMap tilemap;
 	private Item item;

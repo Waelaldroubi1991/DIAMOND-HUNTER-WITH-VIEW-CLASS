@@ -7,6 +7,11 @@ import java.awt.Container;
 import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.Point;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
@@ -45,6 +50,9 @@ public class controller implements Initializable {
 	private Button btnmap;
 	
 	@FXML
+	private Button pd;
+	
+	@FXML
 	private Button btnab;
 	
 	@FXML
@@ -67,6 +75,12 @@ public class controller implements Initializable {
 	
 	@FXML
 	private Label label;
+	
+	@FXML
+	private Label DH;
+	
+	@FXML
+	private Label thegame;
 	
 	/*public class NumberTextField extends TextField
 	{
@@ -127,6 +141,7 @@ public class controller implements Initializable {
 				//frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 				frame.setVisible(true);
 	}
+	//function to show the main game
 	@FXML
 	public void pg (ActionEvent event){
 JFrame window = new JFrame("Diamond Hunter");
@@ -139,6 +154,22 @@ JFrame window = new JFrame("Diamond Hunter");
 		window.setLocationRelativeTo(null);
 		window.setVisible(true);
 		//window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	}
+	
+	@FXML
+	public void pd (ActionEvent event){
+		//this line to create a screen
+				JFrame frame = new JFrame ("Player and Diamonds");
+				//size of the screen
+				frame.setSize(new Dimension (655, 600));
+				//starting point of the screen so it won't start at the up left corner of the screen
+				frame.setLocation(new Point(350,80));
+				//creating the Panel container
+				viewpd panel = new viewpd();
+				frame.setContentPane(panel);
+				//to close the application when it's finish
+				//frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+				frame.setVisible(true);
 	}
 	
 	@FXML
@@ -160,27 +191,55 @@ JFrame window = new JFrame("Diamond Hunter");
 	
 	@FXML
 	public void changeab(){
-		/*final TextField axeX = new TextField ();
-		String axe1 = axeX.getText();
+		final TextField axeX = new TextField ();
+		//String axe1 = axeX.getText();
 		final TextField boatX = new TextField ();
 		//String boat1= boatX.getText();
-		String boat1= boatX.getText();
+		//String boat1= boatX.getText();
 		final TextField axeY = new TextField ();
-		String axe2 = axeY.getText();
+		//String axe2 = axeY.getText();
 		final TextField boatY = new TextField ();
-		String boat2= boatY.getText();
+		//String boat2= boatY.getText();
 		//Integer x1 = Integer.valueOf(axe1);
-		Integer x1 = Integer.parseInt(axe1);
+		//Integer x1 = Integer.parseInt(axe1);
 		//Integer x2 = Integer.valueOf(axe2);
-		Integer x2 = Integer.parseInt(axe2);
+		//Integer x2 = Integer.parseInt(axe2);
 		//Integer b1 = Integer.valueOf(boat1);
-		Integer b1 = Integer.parseInt(boat1);
+		//Integer b1 = Integer.parseInt(boat1);
 		//Integer b2 = Integer.valueOf(boat2);
-		Integer b2 = Integer.parseInt(boat2);*/
+		//Integer b2 = Integer.parseInt(boat2);
 		int x1 = Integer.parseInt(axeX.getText());
 		int x2 = Integer.parseInt(axeY.getText());
 		int b1 = Integer.parseInt(boatX.getText());
 		int b2 = Integer.parseInt(boatY.getText());
+		
+		try{
+			FileWriter fw = new FileWriter("/Maps/change position.txt");
+			PrintWriter pw = new PrintWriter(fw);
+			
+			pw.println(x1);
+			pw.println(x2);
+			pw.println(b1);
+			pw.println(b2);
+			
+			pw.close();
+		}
+		catch (IOException e){
+			System.out.println("error writting to a field");
+		}
+		
+		try{
+			FileReader fr = new FileReader("/Maps/change position.txt");
+			BufferedReader br = new BufferedReader(fr);
+			
+			String str;
+			while ((str = br.readLine())!=null){
+				System.out.println(str + "\n");
+			}
+		}
+		catch (IOException e){
+			System.out.println("error reading to a field");
+		}
 		//String axe=new axe.getText();
 				//String boat= boat.getText();
 				items = new ArrayList<Item>();
@@ -203,6 +262,8 @@ JFrame window = new JFrame("Diamond Hunter");
 				//boat();	
 				//return item;
 				//return item1;
+				
+				
 	}
 	//added just in case the one at changeAB not reading
 	public void paint (Graphics g){
