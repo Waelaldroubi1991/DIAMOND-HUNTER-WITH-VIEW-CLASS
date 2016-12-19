@@ -213,7 +213,7 @@ JFrame window = new JFrame("Diamond Hunter");
 		int b1 = Integer.parseInt(boatX.getText());
 		int b2 = Integer.parseInt(boatY.getText());
 		
-		try{
+		/*try{
 			FileWriter fw = new FileWriter("/Maps/change position.txt");
 			PrintWriter pw = new PrintWriter(fw);
 			
@@ -239,7 +239,7 @@ JFrame window = new JFrame("Diamond Hunter");
 		}
 		catch (IOException e){
 			System.out.println("error reading to a field");
-		}
+		}*/
 		//String axe=new axe.getText();
 				//String boat= boat.getText();
 				items = new ArrayList<Item>();
