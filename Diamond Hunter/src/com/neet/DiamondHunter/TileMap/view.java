@@ -3,16 +3,12 @@
 //023676
 package com.neet.DiamondHunter.TileMap;
 
-import java.awt.Dimension;
-import java.awt.Graphics;
-import java.awt.Point;
-import java.util.ArrayList;
 
-import javax.swing.JFrame;
+import java.awt.Graphics;
+
 import javax.swing.JPanel;
 
-import com.neet.DiamondHunter.Entity.Item;
-import com.neet.DiamondHunter.TileMap.*;
+
 
 //this class is to control the whole map view application
 //it's in swing right now and I will change it to javafx as a next step
@@ -20,6 +16,10 @@ import com.neet.DiamondHunter.TileMap.*;
 
 public class view extends JPanel{
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	//object to call draw function from TileMap
 	private TileMap tilemap;
 	//private Item item;

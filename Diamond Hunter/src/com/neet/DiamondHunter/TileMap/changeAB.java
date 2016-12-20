@@ -3,23 +3,22 @@
 //023676
 package com.neet.DiamondHunter.TileMap;
 
-import java.awt.Dimension;
-import java.awt.Graphics;
-import java.awt.Point;
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.util.ArrayList;
 
-import javax.swing.JFrame;
+import java.awt.Graphics;
+
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.List;
+
+
 import javax.swing.JPanel;
-import application.*;
-import javafx.scene.control.TextField;
+
+
 
 import com.neet.DiamondHunter.Entity.Item;
-import com.neet.DiamondHunter.TileMap.*;
+
 
 //this class is to control the whole map view application
 //it's in swing right now and I will change it to javafx as a next step
@@ -35,8 +34,9 @@ public class changeAB extends JPanel{
 	private Item item1;
 	private ArrayList<Item> items;
 	private ArrayList<Item> items1;
-	private controller control;
-	private int[][]index=null;
+	
+	//private int[][]index=null;
+	List<Integer> index = new ArrayList<>();
 	
 	
 	//Constructor to load recourses like map and tiles
@@ -64,10 +64,30 @@ public class changeAB extends JPanel{
         	System.out.println("Error writting to a txt file");
         }*/
 		
-		try{
-
+	
+			try {
+				for (String line : Files.readAllLines(Paths.get("abc.txt"))){
+					Integer i = Integer.valueOf(line);
+				    index.add(i);
+				}
+			}  catch (IOException e)
+			{
+						e.printStackTrace();
+			}
+		
+	
+	item = new Item(tilemap);
+	item.setType(Item.AXE);
+	item.setTilePosition(index.get(1),index.get(0));
+	items.add(item);
+	
+	item1 = new Item(tilemap);
+	item1.setType(Item.BOAT);
+	item1.setTilePosition(index.get(3),index.get(2));
+	items1.add(item1);
+	}
             //BufferedReader br = new BufferedReader(new FileReader("C:/Users/Wael/Desktop/abc.txt"));
-			BufferedReader br = new BufferedReader(new FileReader("abc.txt"));
+			/*BufferedReader br = new BufferedReader(new FileReader("abc.txt"));
             int row=0;
             int size=0;
             String line;
@@ -88,15 +108,7 @@ public class changeAB extends JPanel{
         }catch(IOException ex){
             System.err.println(ex);
         }
-		item = new Item(tilemap);
-		item.setType(Item.AXE);
-		item.setTilePosition(index[0][0],index[0][1]);
-		items.add(item);
 		
-		item1 = new Item(tilemap);
-		item1.setType(Item.BOAT);
-		item1.setTilePosition(index[1][0], index[1][1]);
-		items1.add(item1);
 		
 	}
 	

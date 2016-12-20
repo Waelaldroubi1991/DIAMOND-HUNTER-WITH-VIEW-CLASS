@@ -5,7 +5,7 @@
 
 package com.neet.DiamondHunter.GameState;
 
-import java.awt.Graphics;
+
 import java.awt.Graphics2D;
 import java.awt.Rectangle;
 import java.util.ArrayList;

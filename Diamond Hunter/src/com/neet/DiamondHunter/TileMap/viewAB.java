@@ -3,16 +3,15 @@
 //023676
 package com.neet.DiamondHunter.TileMap;
 
-import java.awt.Dimension;
+
 import java.awt.Graphics;
-import java.awt.Point;
+
 import java.util.ArrayList;
 
-import javax.swing.JFrame;
+
 import javax.swing.JPanel;
-import application.*;
+
 import com.neet.DiamondHunter.Entity.Item;
-import com.neet.DiamondHunter.TileMap.*;
 
 //this class is to control the whole map view application
 //it's in swing right now and I will change it to javafx as a next step

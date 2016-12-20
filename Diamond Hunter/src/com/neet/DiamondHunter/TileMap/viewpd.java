@@ -9,14 +9,18 @@ import java.util.ArrayList;
 import javax.swing.JPanel;
 
 import com.neet.DiamondHunter.Entity.Diamond;
-import com.neet.DiamondHunter.Entity.Player;
+
 import com.neet.DiamondHunter.Manager.Content;
 
 public class viewpd extends JPanel{
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private TileMap tilemap;
 	private ArrayList<Diamond> diamonds;
-	private Player player;
+	
 	//private Content p;
 	
 	public viewpd(){
