@@ -1,3 +1,6 @@
+//this code made by:
+//Wael Aldroubi
+//023676
 package com.neet.DiamondHunter.TileMap;
 
 import java.awt.Graphics;

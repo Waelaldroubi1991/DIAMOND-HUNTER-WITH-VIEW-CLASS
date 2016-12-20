@@ -20,11 +20,11 @@
          <font>
             <Font name="28 Days Later" size="30.0" />
          </font></Button>
-      <TextField fx:id="axeX" layoutX="49.0" layoutY="354.0" onAction="#gettingab" prefHeight="23.0" prefWidth="138.0" promptText="Enter Axe X position" style="-fx-background-radius: 100; -fx-background-color: #ff1493; -fx-border-color: blue; -fx-border-radius: 100;">
+      <TextField fx:id="axeX" layoutX="49.0" layoutY="354.0" prefHeight="23.0" prefWidth="138.0" promptText="Enter Axe X position" style="-fx-background-radius: 100; -fx-background-color: #ff1493; -fx-border-color: blue; -fx-border-radius: 100;">
          <font>
             <Font name="28 Days Later" size="12.0" />
          </font></TextField>
-      <TextField fx:id="boatX" layoutX="213.0" layoutY="354.0" onAction="#gettingab" prefHeight="21.0" prefWidth="138.0" promptText="Enter Boat X position" style="-fx-background-radius: 100; -fx-background-color: #ff1493; -fx-border-radius: 100; -fx-border-color: blue;">
+      <TextField fx:id="boatX" layoutX="213.0" layoutY="354.0" prefHeight="21.0" prefWidth="138.0" promptText="Enter Boat X position" style="-fx-background-radius: 100; -fx-background-color: #ff1493; -fx-border-radius: 100; -fx-border-color: blue;">
          <font>
             <Font name="28 Days Later" size="12.0" />
          </font></TextField>
@@ -32,15 +32,15 @@
          <font>
             <Font name="28 Days Later" size="22.0" />
          </font></Label>
-      <Button fx:id="submit" layoutX="52.0" layoutY="420.0" mnemonicParsing="false" onAction="#changeab" prefHeight="50.0" prefWidth="295.0" style="-fx-background-color: #ff1493; -fx-background-radius: 100; -fx-border-color: blue; -fx-border-radius: 100;" stylesheets="@application.css" text="Submit" textFill="WHITE">
+      <Button fx:id="submit" layoutX="52.0" layoutY="420.0" mnemonicParsing="false" onAction="#gettingab" prefHeight="50.0" prefWidth="295.0" style="-fx-background-color: #ff1493; -fx-background-radius: 100; -fx-border-color: blue; -fx-border-radius: 100;" stylesheets="@application.css" text="Submit" textFill="WHITE">
          <font>
             <Font name="28 Days Later" size="30.0" />
          </font></Button>
-      <TextField fx:id="axeY" layoutX="49.0" layoutY="388.0" onAction="#gettingab" prefHeight="21.0" prefWidth="138.0" promptText="Enter Axe Y Position" style="-fx-background-radius: 100; -fx-background-color: #ff1493; -fx-border-radius: 100; -fx-border-color: blue;">
+      <TextField fx:id="axeY" layoutX="49.0" layoutY="388.0" prefHeight="21.0" prefWidth="138.0" promptText="Enter Axe Y Position" style="-fx-background-radius: 100; -fx-background-color: #ff1493; -fx-border-radius: 100; -fx-border-color: blue;">
          <font>
             <Font name="28 Days Later" size="12.0" />
          </font></TextField>
-      <TextField fx:id="boatY" layoutX="213.0" layoutY="388.0" onAction="#gettingab" prefHeight="21.0" prefWidth="138.0" promptText="Enter Boat Y position" style="-fx-background-radius: 100; -fx-background-color: #ff1493; -fx-border-radius: 100; -fx-border-color: blue;">
+      <TextField fx:id="boatY" layoutX="213.0" layoutY="388.0" prefHeight="21.0" prefWidth="138.0" promptText="Enter Boat Y position" style="-fx-background-radius: 100; -fx-background-color: #ff1493; -fx-border-radius: 100; -fx-border-color: blue;">
          <font>
             <Font name="28 Days Later" size="12.0" />
          </font></TextField>

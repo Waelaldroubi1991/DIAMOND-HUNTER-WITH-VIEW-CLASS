@@ -1,3 +1,6 @@
+//this code made by:
+//Wael Aldroubi
+//023676
 package application;
 
 import com.neet.DiamondHunter.Entity.Item;
@@ -8,6 +11,8 @@ import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.Point;
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -40,6 +45,7 @@ public class controller implements Initializable {
 	private Item item1;
 	private ArrayList<Item> items;
 	private ArrayList<Item> items1;
+	private int[][] index;
 	
 	@Override
 	public void initialize ( URL arg0 , ResourceBundle arg1){
@@ -115,9 +121,9 @@ public class controller implements Initializable {
 		//this line to create a screen
 				JFrame frame = new JFrame ("MapViewer screen");
 				//size of the screen
-				frame.setSize(new Dimension (655, 600));
+				frame.setSize(new Dimension (656, 679));
 				//starting point of the screen so it won't start at the up left corner of the screen
-				frame.setLocation(new Point(350,80));
+				frame.setLocation(new Point(350,60));
 				//creating the Panel container
 				view panel = new view();
 				//btnmap.setContentDisplay(panel);
@@ -131,9 +137,9 @@ public class controller implements Initializable {
 		//this line to create a screen
 				JFrame frame = new JFrame ("AXE & BOAT screen");
 				//size of the screen
-				frame.setSize(new Dimension (655, 600));
+				frame.setSize(new Dimension (656, 679));
 				//starting point of the screen so it won't start at the up left corner of the screen
-				frame.setLocation(new Point(350,80));
+				frame.setLocation(new Point(350,60));
 				//creating the Panel container
 				viewAB panel = new viewAB();
 				frame.setContentPane(panel);
@@ -161,9 +167,9 @@ JFrame window = new JFrame("Diamond Hunter");
 		//this line to create a screen
 				JFrame frame = new JFrame ("Player and Diamonds");
 				//size of the screen
-				frame.setSize(new Dimension (655, 600));
+				frame.setSize(new Dimension (656, 679));
 				//starting point of the screen so it won't start at the up left corner of the screen
-				frame.setLocation(new Point(350,80));
+				frame.setLocation(new Point(350,60));
 				//creating the Panel container
 				viewpd panel = new viewpd();
 				frame.setContentPane(panel);
@@ -176,9 +182,9 @@ JFrame window = new JFrame("Diamond Hunter");
 	public void gettingab (ActionEvent event){
 		JFrame frame = new JFrame ("AXE & BOAT after change");
 		//size of the screen
-		frame.setSize(new Dimension (655, 600));
+		frame.setSize(new Dimension (656, 679));
 		//starting point of the screen so it won't start at the up left corner of the screen
-		frame.setLocation(new Point(350,80));
+		frame.setLocation(new Point(350,60));
 		//creating the Panel container
 		changeAB panel = new changeAB();
 		//Container panel1 = new Container();
@@ -191,14 +197,14 @@ JFrame window = new JFrame("Diamond Hunter");
 	
 	@FXML
 	public void changeab(){
-		final TextField axeX = new TextField ();
+		//final TextField axeX = new TextField ();
 		//String axe1 = axeX.getText();
-		final TextField boatX = new TextField ();
+		//final TextField boatX = new TextField ();
 		//String boat1= boatX.getText();
 		//String boat1= boatX.getText();
-		final TextField axeY = new TextField ();
+		//final TextField axeY = new TextField ();
 		//String axe2 = axeY.getText();
-		final TextField boatY = new TextField ();
+		//final TextField boatY = new TextField ();
 		//String boat2= boatY.getText();
 		//Integer x1 = Integer.valueOf(axe1);
 		//Integer x1 = Integer.parseInt(axe1);
@@ -208,19 +214,86 @@ JFrame window = new JFrame("Diamond Hunter");
 		//Integer b1 = Integer.parseInt(boat1);
 		//Integer b2 = Integer.valueOf(boat2);
 		//Integer b2 = Integer.parseInt(boat2);
+		
 		int x1 = Integer.parseInt(axeX.getText());
 		int x2 = Integer.parseInt(axeY.getText());
 		int b1 = Integer.parseInt(boatX.getText());
 		int b2 = Integer.parseInt(boatY.getText());
 		
+		//String filename="abc.txt";
+		//File file = new File("abcd");
+	        try{
+	        	index[0][0]=x1;
+   	            index[0][1]=x2;
+   	            index[1][0]=b1;
+   	            index[1][1]=b2;
+	        	//PrintWriter output= new PrintWriter(file);
+	        	
+   	            //int[] array = new int[]{x1,x2};
+   	            //int[] array1 = new int[]{b1,b2};
+	            //BufferedWriter bw = new BufferedWriter(new FileWriter("C:/Users/Wael/Desktop/abc.txt"));
+	            BufferedWriter bw = new BufferedWriter(new FileWriter("abc.txt"));
+	            for (int i = 0; i < 2; i++) {
+	              for (int j = 0; j < 2; j++) {
+	            
+	            	 // System.out.println("Idiot");
+		              
+	             //bw.write("hi");
+	           
+	            bw.write(index[i][j] + " ");
+	            	  //output.write(index[i][j] + " ");
+	           // System.out.println("Idiot");
+	            
+	               }
+	              bw.close();
+	              //bw.newLine();
+	         }
+	       // bw.flush();
+	        //
+	            //System.out.println("Save Coordinate File value="+index[0][1]);
+	           
+	        }
+	        catch (IOException e){
+	        	System.out.println("Error writting to a txt file");
+	        }
+	}
+	        /*
+	        try{
+
+	            BufferedReader br = new BufferedReader(new FileReader(new File("C:/Users/Wael/Desktop/ab.txt")));
+	            int row=0;
+	            int size=0;
+	            String line;
+	            while((line=br.readLine())!=null){
+
+	                String[] values = line.trim().split("\\s+");
+	                if(index == null){
+	                    size = values.length;
+	                    index = new int[size][size];
+	                }
+
+	                for(int col=0; col<size; col++){
+	                    index[row][col]=Integer.valueOf(values[col]);
+	                }
+	                row++;
+	            }
+
+	        }catch(NumberFormatException |IOException ex){
+	            System.err.println(ex);
+	        }
+
+	    
+	    
+		
 		/*try{
-			FileWriter fw = new FileWriter("/Maps/change position.txt");
+			FileWriter fw = new FileWriter("ab.txt");
 			PrintWriter pw = new PrintWriter(fw);
 			
-			pw.println(x1);
-			pw.println(x2);
-			pw.println(b1);
-			pw.println(b2);
+			pw.write(x1);
+			pw.write(x2);
+			pw.write(b1);
+			pw.write(b2);
+			pw.flush();
 			
 			pw.close();
 		}
@@ -229,7 +302,7 @@ JFrame window = new JFrame("Diamond Hunter");
 		}
 		
 		try{
-			FileReader fr = new FileReader("/Maps/change position.txt");
+			FileReader fr = new FileReader("ab.txt");
 			BufferedReader br = new BufferedReader(fr);
 			
 			String str;
@@ -239,7 +312,7 @@ JFrame window = new JFrame("Diamond Hunter");
 		}
 		catch (IOException e){
 			System.out.println("error reading to a field");
-		}*/
+		}
 		//String axe=new axe.getText();
 				//String boat= boat.getText();
 				items = new ArrayList<Item>();
@@ -252,19 +325,20 @@ JFrame window = new JFrame("Diamond Hunter");
 				//axe();
 				item = new Item(tilemap);
 				item.setType(Item.AXE);
-				item.setTilePosition(x1,x2);
+				item.setTilePosition(index[0][0],index[0][1]);
 				items.add(item);
 				
 				item1 = new Item(tilemap);
 				item1.setType(Item.BOAT);
-				item1.setTilePosition(b1, b2);
+				item1.setTilePosition(index[1][0], index[1][1]);
 				items1.add(item1);
 				//boat();	
 				//return item;
 				//return item1;
 				
 				
-	}
+	}*/
+
 	//added just in case the one at changeAB not reading
 	public void paint (Graphics g){
 		tilemap.draw(g);
@@ -276,7 +350,7 @@ JFrame window = new JFrame("Diamond Hunter");
 	
 	
 
-	public void controller() {
+	public controller() {
 		
 	}
 
