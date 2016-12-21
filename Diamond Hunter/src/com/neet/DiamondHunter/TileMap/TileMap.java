@@ -47,7 +47,9 @@ public class TileMap {
 	// drawing
 	private int rowOffset;
 	private int colOffset;
+	@SuppressWarnings("unused")
 	private int numRowsToDraw;
+	@SuppressWarnings("unused")
 	private int numColsToDraw;
 	
 	public TileMap(int tileSize) {
