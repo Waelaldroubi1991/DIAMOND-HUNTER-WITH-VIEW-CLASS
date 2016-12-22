@@ -10,42 +10,27 @@ import javax.swing.JPanel;
 
 import com.neet.DiamondHunter.Entity.Diamond;
 
-import com.neet.DiamondHunter.Manager.Content;
+//this class is to view diamods in the map.
 
 public class viewpd extends JPanel{
 	
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
+	
+	//objects to call my other functions from the game.
 	private TileMap tilemap;
 	private ArrayList<Diamond> diamonds;
 	
-	//private Content p;
-	
 	public viewpd(){
-		//Player player;
-		//Player p;
-		//player = new Player(tilemap);
-		//p = new Content();
-		//p = new Player(tilemap);
+		//objects to call my other functions from the game.
 		diamonds = new ArrayList<Diamond>();
-		Content.load("/Sprites/playersprites.gif", 16, 16);
+		
+		//to load the map.
 		tilemap = new TileMap(16);
 		tilemap.loadMap("/Maps/testmap.map");
 		tilemap.loadTiles("/Tilesets/testtileset.gif");
-		//player.setPosition(17, 17);
-		//player.setMapPosition();
-		//
-		//player.setTilePosition(17, 17);
-
-		//player.setTilePosition(17, 17);
 		
-		//player.setTotalDiamonds(diamonds.size());
-		//player.setTilePosition(17, 17);
-		
+		//to load the Diamonds.
 		Diamond d;
-		
 		d = new Diamond(tilemap);
 		d.setTilePosition(20, 20);
 		d.addChange(new int[] { 23, 19, 1 });
@@ -98,16 +83,13 @@ public class viewpd extends JPanel{
 		d = new Diamond(tilemap);
 		d.setTilePosition(13, 20);
 		diamonds.add(d);
-		
-		
 	}
 	
+	//function to call graphics
 	public void paint (Graphics g){
 		tilemap.draw(g);
-		//player.draw(g);
 		for(Diamond d : diamonds) {
 			d.draw(g);
 		}
 	}
-
 }

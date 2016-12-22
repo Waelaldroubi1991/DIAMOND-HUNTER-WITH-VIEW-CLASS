@@ -35,9 +35,10 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
+//this class is to control all of tilemap classes and connect them to the User Interface
 
 public class controller implements Initializable {
-	
+	//my objects to call the functions or constractors in my Tilemap classes
 	private TileMap tilemap;
 	private Item item;
 	private Item item1;
@@ -47,7 +48,7 @@ public class controller implements Initializable {
 	public void initialize ( URL arg0 , ResourceBundle arg1){
 		
 	}
-	
+	//my Interface buttons,labels, and text fields.
 	@FXML
 	private Button btnmap;
 	
@@ -84,34 +85,8 @@ public class controller implements Initializable {
 	@FXML
 	private Label thegame;
 	
-	/*public class NumberTextField extends TextField
-	{
 
-	    @Override
-	    public void replaceText(int start, int end, String text)
-	    {
-	        if (text.matches("[0-9]*"))
-	        {
-	            super.replaceText(start, end, text);
-	        }
-	    }
-
-	    @Override
-	    public void replaceSelection(String text)
-	    {
-	        if (validate(text))
-	        {
-	            super.replaceSelection(text);
-	        }
-	    }
-
-	    private boolean validate(String text)
-	    {
-	        return text.matches("[0-9]*");
-	    }
-	}*/
-	
-	
+	//function to view the map connected to view diamond hunter button
 	@FXML
 	public void map (ActionEvent event){
 		//this line to create a screen
@@ -124,10 +99,10 @@ public class controller implements Initializable {
 				view panel = new view();
 				//btnmap.setContentDisplay(panel);
 				frame.setContentPane(panel);
-				//to close the application when it's finish
-				//frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 				frame.setVisible(true);
 	}
+	
+	//function to view the axe and boat original position connected to view axe and boat button
 	@FXML
 	public void ab (ActionEvent event){
 		//this line to create a screen
@@ -139,25 +114,22 @@ public class controller implements Initializable {
 				//creating the Panel container
 				viewAB panel = new viewAB();
 				frame.setContentPane(panel);
-				//to close the application when it's finish
-				//frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 				frame.setVisible(true);
 	}
-	//function to show the main game
+	
+	//function to show the main game connected to play game button.
 	@FXML
 	public void pg (ActionEvent event){
 JFrame window = new JFrame("Diamond Hunter");
-		
 		window.add(new GamePanel());
-		
 		window.setResizable(false);
 		window.pack();
-		
 		window.setLocationRelativeTo(null);
 		window.setVisible(true);
 		//window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
 	
+	//function to view Diamonds in the map connected to view diamonds button.
 	@FXML
 	public void pd (ActionEvent event){
 		//this line to create a screen
@@ -169,38 +141,28 @@ JFrame window = new JFrame("Diamond Hunter");
 				//creating the Panel container
 				viewpd panel = new viewpd();
 				frame.setContentPane(panel);
-				//to close the application when it's finish
-				//frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 				frame.setVisible(true);
 	}
 	
+	//function to change axe and boat position using txt file connected to 4 text fields
 	@FXML
 	public void gettingab (ActionEvent event){
-		
+		//to store the text fields values in int variabels.
 		int x1 = Integer.parseInt(axeX.getText());
 		int x2 = Integer.parseInt(axeY.getText());
 		int b1 = Integer.parseInt(boatX.getText());
 		int b2 = Integer.parseInt(boatY.getText());
-		
 		try{
-        	
-			 
-			 
-			 
-        	PrintWriter output= new PrintWriter("abc.txt","UTF-8");
-        	
+			PrintWriter output= new PrintWriter("abc.txt","UTF-8");
         	output.println(x1);
         	output.println(x2);
         	output.println(b1);
         	output.println(b2);
         	output.close();}
-		
 		catch (IOException e){
         	System.out.println("Error writting to a txt file");
         }
         	
-		
-		
 		JFrame frame = new JFrame ("AXE & BOAT after change");
 		//size of the screen
 		frame.setSize(new Dimension (656, 679));
@@ -212,61 +174,18 @@ JFrame window = new JFrame("Diamond Hunter");
 		//Container panel1 = new Container();
 		//gettingab ();
 		frame.setContentPane(panel);
-		//to close the application when it's finish
-		//frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setVisible(true);
 		
 		
 	}
-	
-	/*public void writetofile(){
-		 try{
-	        	
-	        	//PrintWriter output= new PrintWriter(file);
-	        	
-	            //int[] array = new int[]{x1,x2};
-	            //int[] array1 = new int[]{b1,b2};
-	            //BufferedWriter bw = new BufferedWriter(new FileWriter("C:/Users/Wael/Desktop/abc.txt"));
-	            BufferedWriter bw = new BufferedWriter(new FileWriter("abc.txt"));
-	            for (int i = 0; i < 2; i++) {
-	              for (int j = 0; j < 2; j++) {
-	            
-	            	 // System.out.println("Idiot");
-		              
-	             //bw.write("hi");
-	           
-	           bw.write(index[i][j] + " ");
-	            	  //output.write(index[i][j] + " ");
-	           // System.out.println("Idiot");
-	            
-	               }
-	              bw.close();
-	              //output.close();
-	              //bw.newLine();
-	         }
-	       // bw.flush();
-	        //
-	            //System.out.println("Save Coordinate File value="+index[0][1]);
-	           
-	        }
-	        catch (IOException e){
-	        	System.out.println("Error writting to a txt file");
-	        }
-	}*/
-	
-	
-	
+
 	//added just in case the one at changeAB not reading
 	public void paint (Graphics g){
 		tilemap.draw(g);
 		item.draw(g);
 		item1.draw(g);
 	}
-	
-	
-	
-	
-
+	//my constractor, but it has no job, auto generated.
 	public controller() {
 		
 	}
